@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Demo</title>
+</head>
+<body>
+	<form>
+		<label>Name</label>
+		<input type="text" id="name">
+		<!--When the button is clicked, it calls te javascript function. That is why we are using onsubmit="validate"-->
+		<!--if you want the function to be called once the user moves from your textbox, you can use onblur="validate()"-->
+		<input type="button" value="Submit" onclick="validate()">
+	</form>
+</body>
+<script type="text/javascript">
+	function validate(){
+		//get the value of the textbox you want to confirm if it is filled and store it in a variable
+		var name = document.getElementById('name').value;
+
+		//check if variable is empty
+		if (name == '')
+		{
+			//if the value of the textbox is equal to '', it means that the textbox is empty. we can alert the user.
+			alert('Please fill in your name');
+		}
+
+	}
+</script>
+</html>
+
